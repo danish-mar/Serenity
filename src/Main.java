@@ -2,6 +2,8 @@
 
 
 import Assets.ProductManager;
+import Views.AddProduct;
+import Views.LoginView;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,7 +39,7 @@ public class Main {
         productManager.addNewProduct("Fitbit Charge 5", "Fitbit", 179.99f, 10);
         productManager.addNewProduct("Oculus Quest 2", "Meta", 299.99f, 5);
 
-        productManager.listAllProducts();
+       LoginView lnr = new LoginView();
 
 
 
