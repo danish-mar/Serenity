@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="Added some views and components" />
+    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="Added some views and components">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_45_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Database/DatabaseConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Database/DatabaseSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Database/ProductDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Security/HashUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/DisplayUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Model/ProductTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/logo_small.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serenity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Serenity.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/AddProduct.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/AddProduct.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/AddProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/LoginView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/LoginView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,20 +61,27 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2geDgaajpXZwbdVQvyZPkqzjWVu" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "277",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/keqing/Downloads/sqlite-jdbc-3.45.3.0.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -110,7 +137,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716071769451</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added some views and components">
+      <option name="closed" value="true" />
+      <created>1716072040701</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716072040702</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added some views and components">
+      <option name="closed" value="true" />
+      <created>1716072045658</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716072045658</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +168,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added some views and components" />
     <option name="LAST_COMMIT_MESSAGE" value="Added some views and components" />

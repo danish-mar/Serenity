@@ -9,7 +9,7 @@ public class Product {
     int quantity;
     float price;
 
-    public Product(int id, String name, String brand, int quantity, float price) {
+    public Product(int id,String name, String brand, int quantity, float price) {
         this.id = id;
         this.name = name;
         this.brand = brand;
@@ -17,7 +17,7 @@ public class Product {
         this.price = price;
     }
 
-    float getPrice(){
+    public float getPrice(){
         return this.price;
     }
 

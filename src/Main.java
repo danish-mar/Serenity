@@ -2,11 +2,16 @@
 
 
 import Assets.ProductManager;
-import Views.AddProduct;
-import Views.LoginView;
+import Assets.Security.HashUtil;
+import Assets.Views.LoginView;
+
+
 
 public class Main {
     public static void main(String[] args) {
+
+        String password = "a4abce850ef890577152968be9b825d5fe5e8f853ccbcf52e1daa021bee41905";
+        String username = "keqing";
 
         System.out.println("[Serenity] : Starting main thread \uD83D\uDC4B\uD83C\uDFFB");
 
@@ -39,8 +44,8 @@ public class Main {
         productManager.addNewProduct("Fitbit Charge 5", "Fitbit", 179.99f, 10);
         productManager.addNewProduct("Oculus Quest 2", "Meta", 299.99f, 5);
 
-       LoginView lnr = new LoginView();
-
+//         initially launch the login screen
+       LoginView lnr = new LoginView(password,username, productManager);
 
 
 
