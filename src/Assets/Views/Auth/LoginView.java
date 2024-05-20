@@ -1,8 +1,9 @@
-package Assets.Views;
+package Assets.Views.Auth;
 
 import Assets.ProductManager;
 import Assets.Security.HashUtil;
 import Assets.Utils.DisplayUtils;
+import Assets.Views.MainView;
 
 import javax.swing.*;
 import java.awt.*;

@@ -4,6 +4,8 @@ package Assets.Views.Model;
 import javax.swing.table.AbstractTableModel;
 import Assets.Product;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ProductTableModel extends AbstractTableModel {
@@ -15,6 +17,10 @@ public class ProductTableModel extends AbstractTableModel {
         this.products = products;
     }
 
+    public void sortProductsById() {
+        Collections.sort(products, Comparator.comparingInt(Product::getId));
+        fireTableDataChanged();
+    }
     @Override
     public int getRowCount() {
         return products.size();
@@ -52,4 +58,30 @@ public class ProductTableModel extends AbstractTableModel {
             default -> String.class;
         };
     }
+
+    public Product getProductAt(int rowIndex) {
+        if (rowIndex >= 0 && rowIndex < products.size()) {
+            return products.get(rowIndex);
+        } else {
+            return null;  // or throw an exception
+        }
+    }
+
+    public void removeRow(int rowIndex) {
+        if (rowIndex >= 0 && rowIndex < products.size()) {
+            products.remove(rowIndex);
+            fireTableRowsDeleted(rowIndex, rowIndex);
+        }
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products.clear();
+        this.products.addAll(products);
+        fireTableDataChanged();
+    }
+
+
+
+
+
 }

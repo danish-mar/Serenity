@@ -2,8 +2,7 @@
 
 
 import Assets.ProductManager;
-import Assets.Security.HashUtil;
-import Assets.Views.LoginView;
+import Assets.Views.Auth.LoginView;
 
 
 

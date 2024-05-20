@@ -1,4 +1,4 @@
-package Assets.Views;
+package Assets.Views.Product;
 
 import Assets.Product;
 import Assets.ProductManager;

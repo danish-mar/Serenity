@@ -4,26 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="Added some views and components">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_45_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Database/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Database/DatabaseSetup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Database/ProductDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Security/HashUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/DisplayUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Model/ProductTableModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/logo_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="Major Update">
+      <change afterPath="$PROJECT_DIR$/src/Assets/UI/RoundedPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/UI/SFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Views/ActionListeners/TableSelectionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Product/EditProduct.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Product/EditProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serenity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Serenity.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Database/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/ProductDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assets/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/AddProduct.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Product/AddProduct.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Product/AddProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/LoginView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Model/ProductTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Model/ProductTableModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/AddProduct.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/AddProduct.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/AddProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/LoginView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/LoginView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +70,9 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
+    "Application.ProductDAO.executor": "Run",
+    "Application.SFrame.executor": "Run",
+    "Application.mainThread.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -86,8 +87,56 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Assets/Views/Auth" />
+      <recent name="$PROJECT_DIR$/src/Assets/Views/Product" />
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.mainThread">
+    <configuration name="ProductDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assets.Database.ProductDAO" />
+      <module name="Serenity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Assets.Database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assets.UI.SFrame" />
+      <module name="Serenity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Assets.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mainThread" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Serenity" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.mainThread" />
+      <item itemvalue="Application.ProductDAO" />
+      <item itemvalue="Application.SFrame" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProductDAO" />
+        <item itemvalue="Application.SFrame" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -153,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716072045658</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Major Update">
+      <option name="closed" value="true" />
+      <created>1716143954706</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716143954706</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +228,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added some views and components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some views and components" />
+    <MESSAGE value="Major Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Major Update" />
   </component>
 </project>

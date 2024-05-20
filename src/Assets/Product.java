@@ -51,4 +51,12 @@ public class Product {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public void setId(int i) {
+        this.id = i;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
 }

@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDAO {
-    private static final String DB_URL = "jdbc:sqlite:products.db";
+
+
+    private static final String DB_URL = DatabaseConnection.getConnectionProperties()[0];
 
     // Insert a new product
     public void insertProduct(Product product) {
@@ -109,5 +111,16 @@ public class ProductDAO {
         }
 
         return productList;
+    }
+
+    public static void main(String[] args) {
+        DatabaseConnection dm = new DatabaseConnection("root","nahida@dendro123");
+
+        ProductDAO productDAO = new ProductDAO();
+
+        Product testProduct = new Product(1,"electro k7","electro",5,150.7f);
+
+        productDAO.insertProduct(testProduct);
+
     }
 }
