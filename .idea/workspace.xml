@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Serenity:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="Major Update">
-      <change afterPath="$PROJECT_DIR$/src/Assets/UI/RoundedPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/UI/SFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Views/ActionListeners/TableSelectionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Product/EditProduct.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Product/EditProduct.java" afterDir="false" />
+    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="Major Update 0.1">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Serenity_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/formdev_flatlaf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/formdev_flatlaf_intellij_themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Database/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/AddProduct.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Product/AddProduct.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Product/AddProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/LoginView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Model/ProductTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Model/ProductTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serenity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Serenity.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,25 +62,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.ProductDAO.executor": "Run",
-    "Application.SFrame.executor": "Run",
-    "Application.mainThread.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "277",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/keqing/Downloads/sqlite-jdbc-3.45.3.0.jar",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductDAO.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SFrame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.mainThread.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;277&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/keqing/Downloads/sqlite-jdbc-3.45.3.0.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Assets/Views/Auth" />
@@ -210,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716143954706</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Major Update 0.1">
+      <option name="closed" value="true" />
+      <created>1716236453564</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716236453564</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +237,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added some views and components" />
     <MESSAGE value="Major Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Major Update" />
+    <MESSAGE value="Major Update 0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Major Update 0.1" />
   </component>
 </project>

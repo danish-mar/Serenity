@@ -3,7 +3,12 @@
 
 import Assets.ProductManager;
 import Assets.Views.Auth.LoginView;
-
+import com.formdev.flatlaf.FlatDarculaLaf;
+import com.formdev.flatlaf.FlatLaf;
+import com.formdev.flatlaf.intellijthemes.FlatAllIJThemes;
+import com.formdev.flatlaf.intellijthemes.FlatDarkPurpleIJTheme;
+import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+import com.formdev.flatlaf.themes.FlatMacLightLaf;
 
 
 public class Main {
@@ -45,6 +50,8 @@ public class Main {
 
 //         initially launch the login screen
        LoginView lnr = new LoginView(password,username, productManager);
+
+        FlatMacLightLaf.setup();
 
 
 

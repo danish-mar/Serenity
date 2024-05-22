@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Serenity:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Serenity_jar</output-path>
+    <root id="archive" name="Serenity.jar">
+      <element id="module-output" name="Serenity" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/sqlite-jdbc-3.45.3.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

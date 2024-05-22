@@ -18,8 +18,6 @@ public class LoginView extends JFrame {
 
     public LoginView(String passwordHash, String passedUsername, ProductManager productManager) {
         setTitle("Serenity - Login");
-        setBackground(Color.black);
-        setForeground(Color.white);
         setSize(300, 300);
         setBounds(DisplayUtils.getCenterOfScreen(300,300));
         Image icon = Toolkit.getDefaultToolkit().getImage("src/Assets/logo.png");
