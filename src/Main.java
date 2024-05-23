@@ -3,6 +3,7 @@
 
 import Assets.ProductManager;
 import Assets.Views.Auth.LoginView;
+import Assets.Views.Startup.Startup;
 import com.formdev.flatlaf.FlatDarculaLaf;
 import com.formdev.flatlaf.FlatLaf;
 import com.formdev.flatlaf.intellijthemes.FlatAllIJThemes;
@@ -49,9 +50,14 @@ public class Main {
         productManager.addNewProduct("Oculus Quest 2", "Meta", 299.99f, 5);
 
 //         initially launch the login screen
-       LoginView lnr = new LoginView(password,username, productManager);
+        FlatDarkPurpleIJTheme.setup();
 
-        FlatMacLightLaf.setup();
+        try {
+            Startup startup = new Startup(productManager);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
 
 
 

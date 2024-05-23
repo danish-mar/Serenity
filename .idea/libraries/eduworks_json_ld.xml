@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="eduworks.json.ld" type="repository">
+    <properties maven-id="com.eduworks:org.json-ld:3.1.8" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/eduworks/org.json-ld/3.1.8/org.json-ld-3.1.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/eduworks/ec.base/3.1.8/ec.base-3.1.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/st-js/bridge/html/5.0.bv6/html-5.0.bv6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/st-js/shared/3.3.0/shared-3.3.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/st-js/client-runtime/3.3.0/client-runtime-3.3.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/st-js/bridge/jquery/1.11.3.bv1/jquery-1.11.3.bv1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/jquery/1.11.3/jquery-1.11.3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/eduworks/org.json-ld/3.1.8/org.json-ld-3.1.8-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/eduworks/ec.base/3.1.8/ec.base-3.1.8-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/st-js/bridge/html/5.0.bv6/html-5.0.bv6-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/st-js/shared/3.3.0/shared-3.3.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/st-js/bridge/jquery/1.11.3.bv1/jquery-1.11.3.bv1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

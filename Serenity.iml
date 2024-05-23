@@ -11,5 +11,6 @@
     <orderEntry type="library" name="formdev.flatlaf" level="project" />
     <orderEntry type="library" name="mysql.connector.j" level="project" />
     <orderEntry type="library" name="formdev.flatlaf.intellij.themes" level="project" />
+    <orderEntry type="library" name="eduworks.json.ld" level="project" />
   </component>
 </module>
