@@ -13,17 +13,17 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '21' # Java 21 or the version you're using
+          java-version: '21' # Java 17 or the version you're using
           distribution: 'adopt'
-          cache: 'gradle' # Adjust if you're using Maven
+          cache: 'maven' # Adjust cache for Maven
 
       - name: Build JAR (Linux)
-        run: ./gradlew build # Adjust the build command for your project
+        run: mvn package # Adjust the build command for Maven
 
       - name: Publish Release (Linux)
         uses: softprops/action-gh-release@v1
         with:
-          files: build/libs/*.jar
+          files: target/*.jar
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: v${{ github.run_number }}-linux
           release_name: Release ${{ github.run_number }} (Linux)
@@ -38,16 +38,16 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '21' # Java 21 or the version you're using
+          java-version: '21' # Java 17 or the version you're using
           distribution: 'adopt'
 
       - name: Build JAR (Windows)
-        run: gradlew.bat build # Adjust the build command for your project
+        run: mvn package # Adjust the build command for Maven
 
       - name: Publish Release (Windows)
         uses: softprops/action-gh-release@v1
         with:
-          files: build\libs\*.jar
+          files: target/*.jar
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: v${{ github.run_number }}-windows
           release_name: Release ${{ github.run_number }} (Windows)
