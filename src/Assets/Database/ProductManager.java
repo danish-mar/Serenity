@@ -132,7 +132,7 @@ public class ProductManager {
 
     public int updateProduct(int id, Product updatedProduct, Product oldProduct) {
         String checkSql = "SELECT COUNT(*) FROM Products WHERE id = ?";
-        String updateSql = "UPDATE Products SET name = ?, price = ?, quantity = ? WHERE id = ?";
+        String updateSql = "UPDATE Products SET name = ?, brand=?, price = ?, quantity = ? WHERE id = ?";
 
         try (PreparedStatement checkStmt = connection.prepareStatement(checkSql);
              PreparedStatement updateStmt = connection.prepareStatement(updateSql)) {
@@ -143,9 +143,10 @@ public class ProductManager {
                 if (resultSet.next() && resultSet.getInt(1) > 0) {
                     // Old product exists, proceed to update
                     updateStmt.setString(1, updatedProduct.getName());
-                    updateStmt.setDouble(2, updatedProduct.getPrice());
-                    updateStmt.setInt(3, updatedProduct.getQuantity());
-                    updateStmt.setInt(4, oldProduct.getId());
+                    updateStmt.setString(2,updatedProduct.getBrand());
+                    updateStmt.setDouble(3, updatedProduct.getPrice());
+                    updateStmt.setInt(4, updatedProduct.getQuantity());
+                    updateStmt.setInt(5, oldProduct.getId());
                     updateStmt.executeUpdate();
                     updateLocalDatabaseFromDatabase();
 
