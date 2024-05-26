@@ -1,0 +1,35 @@
+name: Publish JAR to GitHub Releases
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        java: [adopt@1.17.0-1, adopt@1.17.0-1]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: ${{ matrix.java }}
+
+      - name: Build JAR
+        run: mvn package # or your build command
+
+      - name: Publish Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: target/*.jar
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: v${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
