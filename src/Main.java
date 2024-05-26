@@ -58,7 +58,7 @@ public class Main {
 //        productManager.addNewProduct("Oculus Quest 2", "Meta", 299.99f, 5);
 
 //         initially launch the login screen
-        FlatMacLightLaf.setup();
+        FlatMacDarkLaf.setup();
 
         SwingUtilities.invokeLater(() -> {
             Splash splashScreen = new Splash(productManager);

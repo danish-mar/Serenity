@@ -43,8 +43,8 @@ public class ProductManager {
             preparedStatement.setInt(1,productCount);
             preparedStatement.setString(2, name);
             preparedStatement.setString(3,brand);
-            preparedStatement.setFloat(4, price);
-            preparedStatement.setInt(5, availableQuality);
+            preparedStatement.setInt(4, availableQuality);
+            preparedStatement.setFloat(5, price);
             preparedStatement.executeUpdate();
             System.out.println("[Serenity]->(Database) : Product " + name + " was added into the inventory");
             inventory.add(new Product(productCount++, name, brand, availableQuality, price));

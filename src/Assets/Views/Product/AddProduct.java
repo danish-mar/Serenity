@@ -18,7 +18,7 @@ public class AddProduct extends JFrame {
     private JSpinner productQuantity;
 
     public AddProduct(ProductManager productManager, JTable productTable, JLabel totalProductTextField) {
-        setBounds(DisplayUtils.getCenterOfScreen(400,400));
+        setBounds(DisplayUtils.getCenterOfScreen(250,400));
         setTitle("Add New Product");
         setContentPane(addnewProduct);
 
@@ -72,7 +72,7 @@ public class AddProduct extends JFrame {
     }
 
     public AddProduct(Assets.Database.ProductManager productManager, JTable productTable, JLabel totalProductTextField) {
-        setBounds(DisplayUtils.getCenterOfScreen(400,400));
+        setBounds(DisplayUtils.getCenterOfScreen(250,400));
         setTitle("Add New Product");
         setContentPane(addnewProduct);
 

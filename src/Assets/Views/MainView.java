@@ -3,9 +3,13 @@ package Assets.Views;
 import Assets.Product;
 import Assets.ProductManager;
 import Assets.Utils.DisplayUtils;
+import Assets.Utils.IconType;
+import Assets.Utils.IconUtil;
+import Assets.Utils.TableUtils;
 import Assets.Views.Model.ProductTableModel;
 import Assets.Views.Product.AddProduct;
 import Assets.Views.Product.EditProduct;
+import com.mysql.cj.xdevapi.Table;
 
 import javax.swing.*;
 import java.awt.*;
@@ -34,15 +38,16 @@ public class MainView extends JFrame {
 
 
 
-        JMenu productMenu = new JMenu("Product");
+        JMenu productMenu = new JMenu("Product \uD83D\uDCE6");
         JMenu billingMenu = new JMenu("Bill");
         JMenu sellerMenu = new JMenu("Seller");
 
 
+
         // Product menu items
-        JMenuItem addProductMenuItem = new JMenuItem("Add Product");
-        JMenuItem deleteProductMenuItem = new JMenuItem("Delete Product");
-        JMenuItem editProductMenuItem = new JMenuItem("Edit Product");
+        JMenuItem addProductMenuItem = new JMenuItem("➕ Add Product");
+        JMenuItem deleteProductMenuItem = new JMenuItem("❌ Delete Product");
+        JMenuItem editProductMenuItem = new JMenuItem("\uD83D\uDD04 Edit Product");
 
 
         addProductMenuItem.addActionListener(actionEvent -> {
@@ -86,6 +91,7 @@ public class MainView extends JFrame {
         totalProductTextField.setText("Total Product : " + productManager.getProductCount());
 
         productsTable = new JTable(productTableModel);
+        TableUtils.setColumnWidth(productsTable,"ID",50);
 
 
 
@@ -134,23 +140,27 @@ public class MainView extends JFrame {
 
 
 
-
         JMenu productMenu = new JMenu("Product");
+        productMenu.setIcon(IconUtil.getIcon(IconType.PACKAGE));
         JMenu billingMenu = new JMenu("Bill");
         JMenu sellerMenu = new JMenu("Seller");
+        JMenu userMenu = new JMenu("User");
+        userMenu.setIcon(IconUtil.getIcon(IconType.USER));
 
 
         // Product menu items
-        JMenuItem addProductMenuItem = new JMenuItem("Add Product");
-        JMenuItem deleteProductMenuItem = new JMenuItem("Delete Product");
-        JMenuItem editProductMenuItem = new JMenuItem("Edit Product");
+        JMenuItem addProductMenuItem = new JMenuItem("Add Product",IconUtil.getIcon(IconType.ADD));
+        JMenuItem deleteProductMenuItem = new JMenuItem("Delete Product",IconUtil.getIcon(IconType.DELETE));
+        JMenuItem editProductMenuItem = new JMenuItem("Edit Product",IconUtil.getIcon(IconType.EDIT));
+
 
 
         addProductMenuItem.addActionListener(actionEvent -> {
             new AddProduct(productManager, productsTable,totalProductTextField).setVisible(true);
         });
 
-
+        // user menu
+        JMenuItem logOutMenuItem = new JMenuItem("Logout",IconUtil.getIcon(IconType.UNLOCK));
 
         // billing menu items
         JMenuItem newBillMenuItem = new JMenuItem("New Bill");
@@ -174,11 +184,14 @@ public class MainView extends JFrame {
         sellerMenu.add(viewSellersMenuItem);
         sellerMenu.add(removeSellerMenuItem);
 
+        userMenu.add(logOutMenuItem);
+
 
         JMenuBar mainMenuBar = new JMenuBar();
         mainMenuBar.add(productMenu);
         mainMenuBar.add(billingMenu);
         mainMenuBar.add(sellerMenu);
+        mainMenuBar.add(userMenu);
 
 
         setJMenuBar(mainMenuBar);
@@ -223,9 +236,8 @@ public class MainView extends JFrame {
 
     private JPopupMenu createPopupMenu(ProductManager productManager, ProductTableModel productTableModel, int row, JTable productTable) {
         JPopupMenu popupMenu = new JPopupMenu();
-
-        JMenuItem deleteItem = new JMenuItem("Delete");
-        JMenuItem editItem = new JMenuItem("Edit");
+        JMenuItem deleteItem = new JMenuItem("Delete",IconUtil.getIcon(IconType.DELETE));
+        JMenuItem editItem = new JMenuItem("Edit",IconUtil.getIcon(IconType.EDIT));
 
         deleteItem.addActionListener(e -> {
             if (row >= 0 && row < productTableModel.getRowCount()) {
@@ -264,8 +276,8 @@ public class MainView extends JFrame {
     private JPopupMenu createPopupMenu(Assets.Database.ProductManager productManager, ProductTableModel productTableModel, int row, JTable productTable) {
         JPopupMenu popupMenu = new JPopupMenu();
 
-        JMenuItem deleteItem = new JMenuItem("Delete");
-        JMenuItem editItem = new JMenuItem("Edit");
+        JMenuItem deleteItem = new JMenuItem("Delete",IconUtil.getIcon(IconType.DELETE));
+        JMenuItem editItem = new JMenuItem("Edit",IconUtil.getIcon(IconType.EDIT));
 
         deleteItem.addActionListener(e -> {
             if (row >= 0 && row < productTableModel.getRowCount()) {
