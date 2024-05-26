@@ -1,5 +1,6 @@
 name: Publish JAR to GitHub Releases
 
+on: workflow_dispatch
 on:
   push:
     branches:
