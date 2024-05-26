@@ -26,7 +26,6 @@ public class Startup extends JFrame {
 
         setContentPane(splashMainPanel);
         LoginView lnr = new LoginView(productManager, progressBar1,serverAddress.getModel().getSelectedItem().toString(), this);
-        setResizable(false);
 
 
 
@@ -34,7 +33,7 @@ public class Startup extends JFrame {
 
         recentsPanel = new JPanel(new GridBagLayout());
 
-        JLabel option1 = new JLabel("server.vcs.com");
+        JLabel option1 = new JLabel("server.vps.com");
         option1.setForeground(Color.blue);
 
         recentsPanel.add(option1);
@@ -63,6 +62,47 @@ public class Startup extends JFrame {
 
 
     }
+    public Startup(Assets.Database.ProductManager productManager) throws InterruptedException {
+
+        setContentPane(splashMainPanel);
+        LoginView lnr = new LoginView(productManager, progressBar1,serverAddress.getModel().getSelectedItem().toString(), this);
+
+
+
+        setBounds(DisplayUtils.getCenterOfScreen(305,500));
+
+        recentsPanel = new JPanel(new GridBagLayout());
+
+        JLabel option1 = new JLabel("server.vps.com");
+        option1.setForeground(Color.blue);
+
+        recentsPanel.add(option1);
+        operationStatus.setText("");
+
+
+        setVisible(true);
+//
+//        for (int i = 0; i<=100;i++){
+//            progressBar1.setValue(i);
+//            Thread.sleep(50);
+//        }
+
+        connectButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                DatabaseConnection.setMySqlAddress(serverAddress.getModel().getSelectedItem().toString(),"sora");
+
+                progressBar1.setValue(progressBar1.getValue()+25);
+                lnr.setTitle("Authenticate " + serverAddress.getModel().getSelectedItem().toString());
+                lnr.setVisible(true);
+
+            }
+        });
+
+
+
+    }
+
 
     public void progress(){
         operationStatus.setText("Connecting...");

@@ -78,8 +78,9 @@
                     </constraints>
                     <properties>
                       <model>
-                        <item value="billing.appstore.com"/>
                         <item value="10.10.11.7"/>
+                        <item value="localhost"/>
+                        <item value="billing.store.com"/>
                       </model>
                     </properties>
                   </component>
