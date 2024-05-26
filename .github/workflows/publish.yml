@@ -7,12 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        java: [adopt@1.17.0-1, adopt@1.17.0-1]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -21,15 +16,41 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: ${{ matrix.java }}
+          java-version: '21' # Java 21 or the version you're using
+          distribution: 'adopt'
+          cache: 'gradle' # Adjust if you're using Maven
 
-      - name: Build JAR
-        run: mvn package # or your build command
+      - name: Build JAR (Linux)
+        run: ./gradlew build # Adjust the build command for your project
 
-      - name: Publish Release
+      - name: Publish Release (Linux)
         uses: softprops/action-gh-release@v1
         with:
-          files: target/*.jar
+          files: build/libs/*.jar
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: v${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
+          tag_name: v${{ github.run_number }}-linux
+          release_name: Release ${{ github.run_number }} (Linux)
+
+  build_windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '21' # Java 21 or the version you're using
+          distribution: 'adopt'
+
+      - name: Build JAR (Windows)
+        run: gradlew.bat build # Adjust the build command for your project
+
+      - name: Publish Release (Windows)
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build\libs\*.jar
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: v${{ github.run_number }}-windows
+          release_name: Release ${{ github.run_number }} (Windows)
