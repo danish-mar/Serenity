@@ -9,22 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="Fixed brand updatation issue #1">
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/bust_in_silhouette.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/heavy_plus_sign.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/package.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/pencil2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/unlock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/wastebasket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/IconType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/IconUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/TableUtils.java" afterDir="false" />
+    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="added icons">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Database/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Product/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Product/AddProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Serenity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Serenity.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +78,7 @@
     "Application.Startup.executor": "Run",
     "Application.mainThread.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "Maven.Unknown [package].executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "true",
     "Repository.Attach.Sources": "false",
@@ -296,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716714612291</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added icons">
+      <option name="closed" value="true" />
+      <created>1716720719695</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716720719695</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,7 +318,8 @@
     <MESSAGE value="Major Update 0.1" />
     <MESSAGE value="Major Update 0.2 [beta]&#10;added functionality for database connection [mysql]&#10;- Assets/Database/ProdcutManager.java" />
     <MESSAGE value="Fixed brand updatation issue #1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed brand updatation issue #1" />
+    <MESSAGE value="added icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="added icons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
