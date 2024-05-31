@@ -2,8 +2,8 @@ package Assets.Views.Model;
 
 
 import javax.swing.table.AbstractTableModel;
-import Assets.Product;
-import java.util.ArrayList;
+import Assets.Database.Product;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;

@@ -2,7 +2,9 @@ package Assets.Views.Startup;
 
 import Assets.Database.DatabaseConnection;
 import Assets.ProductManager;
+import Assets.Utils.BlurUtil;
 import Assets.Utils.DisplayUtils;
+import Assets.Utils.FrameBlurUtil;
 import Assets.Views.Auth.LoginView;
 import com.formdev.flatlaf.intellijthemes.FlatDarkPurpleIJTheme;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
@@ -91,10 +93,12 @@ public class Startup extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 DatabaseConnection.setMySqlAddress(serverAddress.getModel().getSelectedItem().toString(),"sora");
-
                 progressBar1.setValue(progressBar1.getValue()+25);
                 lnr.setTitle("Authenticate " + serverAddress.getModel().getSelectedItem().toString());
+                FrameBlurUtil.applyBlur(Startup.this);
                 lnr.setVisible(true);
+
+                BlurUtil.blur(Startup.this);
 
             }
         });

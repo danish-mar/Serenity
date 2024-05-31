@@ -1,5 +1,7 @@
 package Assets;
 
+import Assets.Database.Product;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 

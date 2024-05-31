@@ -1,20 +1,21 @@
 package Assets.Views;
 
-import Assets.Product;
+import Assets.Database.DatabaseConnection;
+import Assets.Database.Product;
 import Assets.ProductManager;
-import Assets.Utils.DisplayUtils;
-import Assets.Utils.IconType;
-import Assets.Utils.IconUtil;
-import Assets.Utils.TableUtils;
+import Assets.Utils.*;
+import Assets.Views.Auth.LoginView;
+import Assets.Views.Dialogs.AddNewUser;
 import Assets.Views.Model.ProductTableModel;
 import Assets.Views.Product.AddProduct;
 import Assets.Views.Product.EditProduct;
-import com.mysql.cj.xdevapi.Table;
+import com.sun.tools.javac.Main;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
+import java.sql.SQLException;
+
 
 
 public class MainView extends JFrame {
@@ -133,6 +134,20 @@ public class MainView extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(DisplayUtils.getCenterOfScreen(400,800));
 
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+                // Window lost focus, apply blur
+                FrameBlurUtil.applyBlur(MainView.this);
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+                // Window gained focus, remove blur
+                FrameBlurUtil.removeBlur(MainView.this);
+            }
+        });
+
         // setting purple theme
         productsTable.setBackground(Color.black);
         productsTable.setGridColor(Color.getHSBColor(122,55,155));
@@ -140,16 +155,24 @@ public class MainView extends JFrame {
 
 
 
+        JMenu userMenu = new JMenu("User");
+        userMenu.setIcon(IconUtil.getIcon(IconType.USER));
+
         JMenu productMenu = new JMenu("Product");
         productMenu.setIcon(IconUtil.getIcon(IconType.PACKAGE));
         JMenu billingMenu = new JMenu("Bill");
         JMenu sellerMenu = new JMenu("Seller");
-        JMenu userMenu = new JMenu("User");
-        userMenu.setIcon(IconUtil.getIcon(IconType.USER));
+
+        if(DatabaseConnection.getUserNameFirstName() != null){
+            // naming convention fixed here
+            userMenu = new JMenu(DatabaseConnection.getUserNameFirstName() + " " + DatabaseConnection.getUserNameLastName());
+            userMenu.setIcon(IconUtil.getIcon(IconType.USER));
+        }
 
 
         // Product menu items
         JMenuItem addProductMenuItem = new JMenuItem("Add Product",IconUtil.getIcon(IconType.ADD));
+
         JMenuItem deleteProductMenuItem = new JMenuItem("Delete Product",IconUtil.getIcon(IconType.DELETE));
         JMenuItem editProductMenuItem = new JMenuItem("Edit Product",IconUtil.getIcon(IconType.EDIT));
 
@@ -159,9 +182,11 @@ public class MainView extends JFrame {
             new AddProduct(productManager, productsTable,totalProductTextField).setVisible(true);
         });
 
+
         // user menu
         JMenuItem logOutMenuItem = new JMenuItem("Logout",IconUtil.getIcon(IconType.UNLOCK));
-
+        JMenuItem addUserMenuItem;
+        JMenuItem manageUserItemMenu;
         // billing menu items
         JMenuItem newBillMenuItem = new JMenuItem("New Bill");
         JMenuItem billingHistoryMenuItem = new JMenuItem("Billing History");
@@ -186,6 +211,27 @@ public class MainView extends JFrame {
 
         userMenu.add(logOutMenuItem);
 
+        if(DatabaseUtils.isAdminAccount(DatabaseConnection.getConnection())){
+            addUserMenuItem = new JMenuItem("Add New User",IconUtil.getIcon(IconType.USERADD));
+            manageUserItemMenu = new JMenuItem("Manage Users", IconUtil.getIcon(IconType.USERS));
+            addUserMenuItem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    new AddNewUser();
+                }
+            });
+
+            manageUserItemMenu.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+
+                }
+            });
+            userMenu.add(addUserMenuItem);
+            userMenu.add(manageUserItemMenu);
+        }
+
+
 
         JMenuBar mainMenuBar = new JMenuBar();
         mainMenuBar.add(productMenu);
@@ -201,7 +247,9 @@ public class MainView extends JFrame {
 
         productsTable = new JTable(productTableModel);
 
-
+        logOutMenuItem.addActionListener(actionEvent -> {
+          logOut(productManager);
+        });
 
 
 
@@ -214,15 +262,54 @@ public class MainView extends JFrame {
         productsTable.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
-                if (SwingUtilities.isRightMouseButton(e)) {
-                    int row = productsTable.rowAtPoint(e.getPoint());
-                    productsTable.setRowSelectionInterval(row, row);
+                try {
+                    if (SwingUtilities.isRightMouseButton(e)) {
+                        int row = productsTable.rowAtPoint(e.getPoint());
+                        productsTable.setRowSelectionInterval(row, row);
 
-                    JPopupMenu popupMenu = createPopupMenu(productManager, productTableModel, row, productsTable);
-                    popupMenu.show(e.getComponent(), e.getX(), e.getY());
+                        JPopupMenu popupMenu = createPopupMenu(productManager, productTableModel, row, productsTable);
+                        popupMenu.show(e.getComponent(), e.getX(), e.getY());
+                    }
+                }catch (IllegalArgumentException illegalArgumentException){
+                    JPopupMenu popupMenu = new JPopupMenu();
+                    JMenuItem addProductPopupMenu = new JMenuItem("Add Product",IconUtil.getIcon(IconType.ADD));
+                    addProductPopupMenu.addActionListener(actionEvent -> {
+                        new AddProduct(productManager, productsTable,totalProductTextField).setVisible(true);
+                    });
+                    popupMenu.add(addProductPopupMenu);
+                    popupMenu.show(e.getComponent(),e.getX(),e.getY());
                 }
             }
         });
+
+        deleteProductMenuItem.addActionListener(actionEvent -> {
+            try {
+                Product selectedProduct = productTableModel.getProductAt(productsTable.getSelectedRow());
+                productManager.deleteProduct(selectedProduct);
+                if (productsTable.getModel() instanceof ProductTableModel) {
+                    ((ProductTableModel) productsTable.getModel()).fireTableDataChanged();
+                }
+
+            }catch (NullPointerException nullPointerException){
+                JOptionPane.showMessageDialog(editProductMenuItem,"Please select the product first","Error",JOptionPane.ERROR_MESSAGE);
+            }
+        });
+
+        editProductMenuItem.addActionListener(actionEvent -> {
+
+            try {
+                Product productToBeEdited = productTableModel.getProductAt(productsTable.getSelectedRow());
+                EditProduct editProductFrame = new EditProduct(productManager,productToBeEdited,productsTable,0);
+
+                editProductFrame.setVisible(true);
+            }catch (NullPointerException nullPointerException){
+                JOptionPane.showMessageDialog(editProductMenuItem,"Please select the product first","Error",JOptionPane.ERROR_MESSAGE);
+            }
+
+        });
+
+
+
 
         JScrollPane scrollPane = new JScrollPane(productsTable);
 
@@ -271,6 +358,8 @@ public class MainView extends JFrame {
         popupMenu.add(deleteItem);
         popupMenu.add(editItem);
         return popupMenu;
+
+
     }
 
     private JPopupMenu createPopupMenu(Assets.Database.ProductManager productManager, ProductTableModel productTableModel, int row, JTable productTable) {
@@ -313,4 +402,17 @@ public class MainView extends JFrame {
         return popupMenu;
     }
 
+
+    private void logOut(Assets.Database.ProductManager productManager) {
+        if (JOptionPane.showConfirmDialog(this,"Are you sure to logout","Goodbye " + DatabaseConnection.getUserNameFirstName(), JOptionPane.YES_NO_CANCEL_OPTION) == JOptionPane.YES_OPTION) {
+            try {
+                DatabaseConnection.deinitialize();
+                productManager.deInitialize();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            this.dispose();
+            new LoginView(productManager).setVisible(true);
+        }
+    }
 }

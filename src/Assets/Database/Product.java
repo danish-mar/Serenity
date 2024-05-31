@@ -1,4 +1,4 @@
-package Assets;
+package Assets.Database;
 
 public class Product {
 

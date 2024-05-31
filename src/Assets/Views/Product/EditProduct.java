@@ -1,6 +1,6 @@
 package Assets.Views.Product;
 
-import Assets.Product;
+import Assets.Database.Product;
 import Assets.ProductManager;
 import Assets.Utils.DisplayUtils;
 import Assets.Views.Model.ProductTableModel;

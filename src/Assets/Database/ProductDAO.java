@@ -1,7 +1,5 @@
 package Assets.Database;
 
-import Assets.Product;
-
 
 import java.util.ArrayList;
 import java.util.List;

@@ -9,13 +9,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="added icons">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="pre-release">
+      <change afterPath="$PROJECT_DIR$/src/Assets/Database/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Database/UserManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/bust_in_silhouette_add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/busts_in_silhouette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/BlurGlass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/BlurUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/DatabaseUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/FrameBlurUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Dialogs/AddNewUser.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Dialogs/AddNewUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Serenity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Serenity.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Database/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Database/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Utils/IconType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Utils/IconType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Model/ProductTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Model/ProductTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Product/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Product/AddProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Product/EditProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Product/EditProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Startup/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Startup/Startup.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +44,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -43,14 +63,12 @@
     &quot;assignee&quot;: &quot;danish-mar&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="df3c96e5-15f0-4be7-ad10-20740ee84484" />
-        <option name="url" value="https://github.com/danish-mar/Serenity" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/danish-mar/Serenity.git&quot;,
+    &quot;accountId&quot;: &quot;df3c96e5-15f0-4be7-ad10-20740ee84484&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -68,7 +86,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.BlurGlass.executor": "Run",
     "Application.CreateNewConfig.executor": "Run",
+    "Application.FrameBlurUtil.executor": "Run",
     "Application.LoginView.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.MySqlTest.executor": "Run",
@@ -86,12 +106,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "277",
-    "git-widget-placeholder": "databaseIntegration",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/keqing/Downloads/sqlite-jdbc-3.45.3.0.jar",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -100,14 +123,33 @@
       <recent name="$PROJECT_DIR$/src/Assets/Views/Product" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Assets.Database" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.mainThread">
-    <configuration name="CreateNewConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Assets.Views.Dialogs.CreateNewConfig" />
+    <configuration name="BlurGlass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assets.Utils.BlurGlass" />
       <module name="Serenity" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Assets.Views.Dialogs.*" />
+          <option name="PATTERN" value="Assets.Utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrameBlurUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assets.Utils.FrameBlurUtil" />
+      <module name="Serenity" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Assets.Utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,19 +196,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Startup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Assets.Views.Startup.Startup" />
-      <module name="Serenity" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Assets.Views.Startup.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="mainThread" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Serenity" />
@@ -176,28 +205,21 @@
     </configuration>
     <list>
       <item itemvalue="Application.mainThread" />
+      <item itemvalue="Application.BlurGlass" />
+      <item itemvalue="Application.FrameBlurUtil" />
       <item itemvalue="Application.ProductManager" />
-      <item itemvalue="Application.CreateNewConfig" />
       <item itemvalue="Application.LoginView" />
-      <item itemvalue="Application.Startup" />
       <item itemvalue="Application.MySqlTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BlurGlass" />
+        <item itemvalue="Application.FrameBlurUtil" />
         <item itemvalue="Application.ProductManager" />
         <item itemvalue="Application.MySqlTest" />
         <item itemvalue="Application.LoginView" />
-        <item itemvalue="Application.Startup" />
-        <item itemvalue="Application.CreateNewConfig" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -296,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716720719695</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="pre-release">
+      <option name="closed" value="true" />
+      <created>1716754555623</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716754555624</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -319,7 +349,8 @@
     <MESSAGE value="Major Update 0.2 [beta]&#10;added functionality for database connection [mysql]&#10;- Assets/Database/ProdcutManager.java" />
     <MESSAGE value="Fixed brand updatation issue #1" />
     <MESSAGE value="added icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="added icons" />
+    <MESSAGE value="pre-release" />
+    <option name="LAST_COMMIT_MESSAGE" value="pre-release" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -328,15 +359,6 @@
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.java</url>
-          <line>222</line>
-          <properties class="Assets.Views.Auth.LoginView">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

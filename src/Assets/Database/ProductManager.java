@@ -1,9 +1,5 @@
 package Assets.Database;
 
-import Assets.Product;
-import Assets.Security.HashUtil;
-import com.mysql.cj.x.protobuf.MysqlxPrepare;
-
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -336,5 +332,10 @@ public class ProductManager {
     public ArrayList<Product> getInventory() {
         updateLocalDatabaseFromDatabase();
         return inventory;
+    }
+
+    public void deInitialize(){
+        this.inventory = null;
+        this.connection = null;
     }
 }
