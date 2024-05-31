@@ -9,33 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="pre-release">
-      <change afterPath="$PROJECT_DIR$/src/Assets/Database/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Database/UserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/bust_in_silhouette_add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/Icons/busts_in_silhouette.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/BlurGlass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/BlurUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/DatabaseUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/FrameBlurUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Dialogs/AddNewUser.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Dialogs/AddNewUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serenity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Serenity.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Database/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Database/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Utils/IconType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Utils/IconType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Auth/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Model/ProductTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Model/ProductTableModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Product/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Product/AddProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Product/EditProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Product/EditProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Startup/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Startup/Startup.java" afterDir="false" />
-    </list>
+    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="major bug fixed&#10;&#10;bug #1 fixed&#10;enhancement #6 added&#10;&#10;#1 bug : &#10;&#10;Reviewed-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Tested-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Signed-off-by: danish-mar &lt;danishs2007@gmail.com&gt;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -326,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716754555624</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="major bug fixed&#10;&#10;bug #1 fixed&#10;enhancement #6 added&#10;&#10;#1 bug : &#10;&#10;Reviewed-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Tested-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Signed-off-by: danish-mar &lt;danishs2007@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1717179255646</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717179255646</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -350,7 +332,8 @@
     <MESSAGE value="Fixed brand updatation issue #1" />
     <MESSAGE value="added icons" />
     <MESSAGE value="pre-release" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre-release" />
+    <MESSAGE value="major bug fixed&#10;&#10;bug #1 fixed&#10;enhancement #6 added&#10;&#10;#1 bug : &#10;&#10;Reviewed-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Tested-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Signed-off-by: danish-mar &lt;danishs2007@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="major bug fixed&#10;&#10;bug #1 fixed&#10;enhancement #6 added&#10;&#10;#1 bug : &#10;&#10;Reviewed-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Tested-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Signed-off-by: danish-mar &lt;danishs2007@gmail.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
