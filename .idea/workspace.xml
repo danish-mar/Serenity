@@ -9,7 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="major bug fixed&#10;&#10;bug #1 fixed&#10;enhancement #6 added&#10;&#10;#1 bug : &#10;&#10;Reviewed-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Tested-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Signed-off-by: danish-mar &lt;danishs2007@gmail.com&gt;" />
+    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="major bug fixed&#10;&#10;bug #1 fixed&#10;enhancement #6 added&#10;&#10;#1 bug : &#10;&#10;Reviewed-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Tested-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Signed-off-by: danish-mar &lt;danishs2007@gmail.com&gt;">
+      <change afterPath="$PROJECT_DIR$/src/Assets/Views/Model/UserTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Views/UserManager/UserManagerView.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assets/Views/UserManager/UserManagerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Database/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Database/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Dialogs/AddNewUser.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/UserManager/AddNewUser.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Dialogs/AddNewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/UserManager/AddNewUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,12 +42,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;danish-mar&quot;
-  }
-}</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {}
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/danish-mar/Serenity.git&quot;,
@@ -88,11 +96,12 @@
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Assets/Views/UserManager" />
       <recent name="$PROJECT_DIR$/src/Assets/Views/Auth" />
       <recent name="$PROJECT_DIR$/src/Assets/Views/Product" />
       <recent name="$PROJECT_DIR$" />
@@ -308,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717179255646</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="major bug fixed&#10;&#10;bug #1 fixed&#10;enhancement #6 added&#10;&#10;#1 bug : &#10;&#10;Reviewed-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Tested-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Signed-off-by: danish-mar &lt;danishs2007@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1717179366133</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717179366133</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

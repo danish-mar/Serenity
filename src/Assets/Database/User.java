@@ -1,8 +1,11 @@
 package Assets.Database;
 
+
 import java.util.Date;
 
+
 public class User {
+
     private int id;
     private String username;
     private String password;
@@ -12,6 +15,61 @@ public class User {
     private Date createdAt;
     private Date lastLogin;
     private boolean isAdmin;
+
+    // user permissions
+    private boolean canCreateProducts;
+    private boolean canViewProdcuts;
+    private boolean canUpdateProdcuts;
+    private boolean canDeleteProducts;
+
+    public boolean isCanCreateProducts() {
+        return canCreateProducts;
+    }
+
+    public void setCanCreateProducts(boolean canCreateProducts) {
+        this.canCreateProducts = canCreateProducts;
+    }
+
+    public boolean isCanViewProdcuts() {
+        return canViewProdcuts;
+    }
+
+    public void setCanViewProdcuts(boolean canViewProdcuts) {
+        this.canViewProdcuts = canViewProdcuts;
+    }
+
+    public boolean isCanUpdateProdcuts() {
+        return canUpdateProdcuts;
+    }
+
+    public void setCanUpdateProdcuts(boolean canUpdateProdcuts) {
+        this.canUpdateProdcuts = canUpdateProdcuts;
+    }
+
+    public boolean isCanDeleteProducts() {
+        return canDeleteProducts;
+    }
+
+    public void setCanDeleteProducts(boolean canDeleteProducts) {
+        this.canDeleteProducts = canDeleteProducts;
+    }
+
+    public User(int id, String username, String password, String email, String firstName, String lastName, Date createdAt, Date lastLogin, boolean isAdmin, boolean canCreateProducts, boolean canDeleteProducts, boolean canUpdateProdcuts, boolean canViewProdcuts) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.createdAt = createdAt;
+        this.lastLogin = lastLogin;
+        this.isAdmin = isAdmin;
+
+        this.canCreateProducts = canCreateProducts;
+        this.canDeleteProducts = canDeleteProducts;
+        this.canUpdateProdcuts = canUpdateProdcuts;
+        this.canViewProdcuts = canViewProdcuts;
+    }
 
     public User(int id, String username, String password, String email, String firstName, String lastName, Date createdAt, Date lastLogin, boolean isAdmin) {
         this.id = id;
@@ -23,7 +81,14 @@ public class User {
         this.createdAt = createdAt;
         this.lastLogin = lastLogin;
         this.isAdmin = isAdmin;
+
+        this.canCreateProducts = false;
+        this.canDeleteProducts = false;
+        this.canUpdateProdcuts = false;
+        this.canViewProdcuts = false;
     }
+
+
 
     // Getters and Setters
     public int getId() {

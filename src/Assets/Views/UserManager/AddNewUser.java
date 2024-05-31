@@ -1,26 +1,26 @@
-package Assets.Views.Dialogs;
+package Assets.Views.UserManager;
 
 import Assets.Database.DatabaseConnection;
 import Assets.Security.HashUtil;
 import Assets.Utils.DisplayUtils;
 
 import javax.swing.*;
-import javax.swing.plaf.nimbus.State;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 public class AddNewUser extends JFrame {
     private JTextField usernameTextField;
     private JPasswordField passwordTextField;
+
     private JCheckBox createProductsCheckBox;
     private JCheckBox viewProductsCheckBox;
     private JCheckBox updateProductsCheckBox;
     private JCheckBox deleteProductsCheckBox;
+
     private JTextField firstNameTextField;
     private JTextField lastNameTextField;
     private JCheckBox adminAccountCheckBox;

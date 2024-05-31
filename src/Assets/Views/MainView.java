@@ -2,14 +2,15 @@ package Assets.Views;
 
 import Assets.Database.DatabaseConnection;
 import Assets.Database.Product;
+import Assets.Database.UserManager;
 import Assets.ProductManager;
 import Assets.Utils.*;
 import Assets.Views.Auth.LoginView;
-import Assets.Views.Dialogs.AddNewUser;
+import Assets.Views.UserManager.AddNewUser;
 import Assets.Views.Model.ProductTableModel;
 import Assets.Views.Product.AddProduct;
 import Assets.Views.Product.EditProduct;
-import com.sun.tools.javac.Main;
+import Assets.Views.UserManager.UserManagerView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -218,6 +219,13 @@ public class MainView extends JFrame {
                 @Override
                 public void actionPerformed(ActionEvent actionEvent) {
                     new AddNewUser();
+                }
+            });
+
+            manageUserItemMenu.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    new UserManagerView(new UserManager());
                 }
             });
 
