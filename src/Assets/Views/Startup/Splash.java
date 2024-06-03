@@ -1,5 +1,6 @@
 package Assets.Views.Startup;
 
+import Assets.Panels.GradientPanel;
 import Assets.ProductManager;
 
 import javax.swing.*;
@@ -25,7 +26,7 @@ public class Splash extends JWindow {
         setBackground(new Color(0, 0, 0, 0)); // Transparent background to handle rounded corners properly
 
         // Custom panel with rounded borders
-        RoundedPanel roundedPanel = new RoundedPanel();
+        GradientPanel roundedPanel = new GradientPanel();
         roundedPanel.setLayout(new BorderLayout());
         roundedPanel.setBackground(Color.DARK_GRAY);
 
@@ -76,7 +77,7 @@ public class Splash extends JWindow {
     }
     public Splash(Assets.Database.ProductManager productManager) {
         // Set the size and position of the splash screen
-        setSize(400, 300);
+        setSize(500, 350);
         setLocationRelativeTo(null);
 
         // Make the window undecorated and set a rounded shape
@@ -84,16 +85,42 @@ public class Splash extends JWindow {
         setBackground(new Color(0, 0, 0, 0)); // Transparent background to handle rounded corners properly
 
         // Custom panel with rounded borders
-        RoundedPanel roundedPanel = new RoundedPanel();
-        roundedPanel.setLayout(new BorderLayout());
+        GradientPanel roundedPanel = new GradientPanel();
+        roundedPanel.setLayout(null);
         roundedPanel.setBackground(Color.DARK_GRAY);
 
+        // Add application icon
+        ImageIcon icon = new ImageIcon("src/Assets/logo.png");
+        Image image = icon.getImage();
+        Image newImage = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
+        icon = new ImageIcon(newImage);  // transform it back
+
+
+        JLabel iconLabel = new JLabel(icon);
+        iconLabel.setBounds(getWidth() * 60 / 100, getHeight() * 15 / 100, icon.getIconWidth(), icon.getIconHeight());
+
+
+        roundedPanel.add(iconLabel);
+
+
         // Add a label with an image or text
-        JLabel label = new JLabel("Welcome to Serenity", JLabel.CENTER);
-        label.setFont(new Font("Arial", Font.BOLD, 24));
+        JLabel label = new JLabel("Serenity");
+        label.setFont(new Font("Arial", Font.BOLD, 37));
         label.setOpaque(false);
         label.setForeground(Color.WHITE);
-        roundedPanel.add(label, BorderLayout.CENTER);
+        label.setBounds(getWidth() * 10 / 100, getHeight() * 15 / 100, 200, 50);
+        roundedPanel.add(label);
+
+        // Add "Powered By Google" label
+        JLabel poweredByLabel = new JLabel("<html>Powered By <b>MySQL</b></html>");
+        poweredByLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+        poweredByLabel.setForeground(Color.WHITE);
+
+        // Positioning at the bottom right with padding
+        int padding = 10;
+        Dimension labelSize = poweredByLabel.getPreferredSize();
+        poweredByLabel.setBounds(getWidth() - labelSize.width - getWidth() * 10 / 100, getHeight() - labelSize.height - getHeight() * 10 / 100, labelSize.width, labelSize.height);
+        roundedPanel.add(poweredByLabel);
 
         setContentPane(roundedPanel);
 

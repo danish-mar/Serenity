@@ -132,6 +132,7 @@ public class MainView extends JFrame {
         Image icon = Toolkit.getDefaultToolkit().getImage("src/Assets/logo.png");
         setIconImage(icon);
         setSize(800, 400);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(DisplayUtils.getCenterOfScreen(400,800));
 

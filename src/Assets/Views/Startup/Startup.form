@@ -78,7 +78,7 @@
                     </constraints>
                     <properties>
                       <model>
-                        <item value="10.10.11.7"/>
+                        <item value="10.10.10.21"/>
                         <item value="localhost"/>
                         <item value="billing.store.com"/>
                       </model>
