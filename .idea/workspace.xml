@@ -9,15 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="added functionality of user manager for bug #7">
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/3party/mysql-1-tp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Drawable/3party/mysql-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Panels/GradientPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assets/Utils/ImageUtils.java" afterDir="false" />
+    <list default="true" id="e8ea4e5b-9df3-4886-b64b-46bbc423335c" name="Changes" comment="remake of the `Splash.java` added some features also">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Database/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Database/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/Utils/DatabaseUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Utils/DatabaseUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assets/Views/Startup/Splash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Startup/Splash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Views/Startup/Startup.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/Startup/Startup.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assets/Views/UserManager/UserManagerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Views/UserManager/UserManagerView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,40 +61,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.BlurGlass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CreateNewConfig.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FrameBlurUtil.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LoginView.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MySqlTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProductDAO.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProductManager.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SFrame.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Startup.executor&quot;: &quot;Run&quot;,
-    &quot;Application.mainThread.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Maven.Unknown [package].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;277&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/keqing/workspace/Serenity/src/Assets&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.BlurGlass.executor": "Run",
+    "Application.CreateNewConfig.executor": "Run",
+    "Application.FrameBlurUtil.executor": "Run",
+    "Application.LoginView.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MySqlTest.executor": "Run",
+    "Application.ProductDAO.executor": "Run",
+    "Application.ProductManager.executor": "Run",
+    "Application.SFrame.executor": "Run",
+    "Application.Startup.executor": "Run",
+    "Application.mainThread.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Maven.Unknown [package].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "277",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "database.data.extractors.current.export.id": "JSON-Groovy.json.groovy",
+    "database.data.extractors.current.id": "SQL Inserts",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/keqing/workspace/Serenity/src/Assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Assets" />
@@ -206,6 +216,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -214,6 +232,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716049357121</updated>
+      <workItem from="1717601075954" duration="1486000" />
+      <workItem from="1717660189313" duration="436000" />
+      <workItem from="1717865532590" duration="2428000" />
+      <workItem from="1717923450941" duration="1591000" />
+      <workItem from="1717931624233" duration="23000" />
+      <workItem from="1717961002566" duration="5556000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -335,8 +359,19 @@
       <option name="project" value="LOCAL" />
       <updated>1717194778651</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="remake of the `Splash.java` added some features also">
+      <option name="closed" value="true" />
+      <created>1717453001136</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717453001137</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -361,7 +396,8 @@
     <MESSAGE value="pre-release" />
     <MESSAGE value="major bug fixed&#10;&#10;bug #1 fixed&#10;enhancement #6 added&#10;&#10;#1 bug : &#10;&#10;Reviewed-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Tested-by: danish-mar &lt;danishs2007@gmail.com&gt;&#10;&#10;Signed-off-by: danish-mar &lt;danishs2007@gmail.com&gt;" />
     <MESSAGE value="added functionality of user manager for bug #7" />
-    <option name="LAST_COMMIT_MESSAGE" value="added functionality of user manager for bug #7" />
+    <MESSAGE value="remake of the `Splash.java` added some features also" />
+    <option name="LAST_COMMIT_MESSAGE" value="remake of the `Splash.java` added some features also" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

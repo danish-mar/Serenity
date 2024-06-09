@@ -1,9 +1,8 @@
 package Assets.Database;
 
 import Assets.Security.HashUtil;
-import com.mysql.cj.x.protobuf.MysqlxPrepare;
+import Assets.Utils.DatabaseUtils;
 
-import javax.xml.crypto.Data;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -140,21 +139,77 @@ public class UserManager {
 
     }
 
-    public void deleteUser(int userId) {
+    public boolean deleteUser(int userId) {
         String query = "DELETE FROM User WHERE id = ?";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)){
+
+            // drops the user from the main database
+            dropUser(getUsernameById(userId));
+
+
             preparedStatement.setInt(1, userId);
             int rowsAffected = preparedStatement.executeUpdate();
 
+
+
             if (rowsAffected > 0) {
                 System.out.println("[Serenity]->(UserManager)->(Database) : User with ID " + userId + " deleted successfully!");
+
+                // post delete routines
+
+                DatabaseUtils.resetAutoIncrement(
+                        connection,
+                        "User",
+                        DatabaseUtils.getHighestId(
+                                connection,
+                                "User"
+                        )
+                );
+
+                updateLocalDatabaseFromDatabase();
+                return true;
             } else {
                 System.out.println("[Serenity]->(UserManager)->(Database) : User with ID " + userId + " not found!");
             }
-            updateLocalDatabaseFromDatabase();
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        return false;
+    }
+
+    public void dropUser(String username){
+
+        String query = "DROP USER IF EXISTS " + username;
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)){
+
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("[Serenity]->(UserManager)->(Database) : user " + username + " deleted from the system!");
+            }else{
+                System.out.println("[Serenity]->(UserManager)->(Database) : user " + username + " not found!");
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public String getUserbyId(int id){
+        String query = "SELECT username FROM User WHERE id = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)){
+
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                return resultSet.getString("username");
+            }else {
+                return null;
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -255,12 +310,6 @@ public class UserManager {
     }
 
 
-
-
-
-
-
-
     private String getUsernameById(int id) {
         String query = "SELECT username FROM User WHERE id = ?";
         String username = null;
@@ -278,11 +327,18 @@ public class UserManager {
                 }
             }
         } catch (SQLException e) {
+            // Print detailed error message
             e.printStackTrace();
+            System.out.println("SQL Error: " + e.getMessage());
+        } catch (Exception e) {
+            // Catch any other potential exceptions
+            e.printStackTrace();
+            System.out.println("Error: " + e.getMessage());
         }
 
         return username;
     }
+
 
 
     public void updateUser(int userId, String username , String email, String firstName, String lastName, boolean isAdmin) {

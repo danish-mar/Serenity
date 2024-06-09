@@ -2,10 +2,8 @@ package Assets.Utils;
 import Assets.Database.DatabaseConnection;
 
 import javax.xml.crypto.Data;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Timestamp;
+import java.sql.*;
+
 public class DatabaseUtils {
     public static void updateLastLogin(Connection connection, String username) {
         String query = "UPDATE User SET last_login = ? WHERE username = ?";
@@ -74,5 +72,35 @@ public class DatabaseUtils {
         }catch (Exception e){
             return false;
         }
+    }
+
+    public static void resetAutoIncrement(Connection connection, String tableName, int newStartValue) {
+        String query = "ALTER TABLE " + tableName + " AUTO_INCREMENT = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, newStartValue);
+            preparedStatement.executeUpdate();
+            System.out.println("Auto-increment value reset successfully.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error resetting auto-increment value.");
+        }
+    }
+
+    public static int getHighestId(Connection connection, String tableName) {
+        String query = "SELECT MAX(id) AS max_id FROM " + tableName;
+        int maxId = -1;
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
+
+            if (resultSet.next()) {
+                maxId = resultSet.getInt("max_id");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error retrieving the highest ID.");
+        }
+
+        return maxId;
     }
 }

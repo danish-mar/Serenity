@@ -133,7 +133,7 @@ public class Splash extends JWindow {
                     opacity = 1.0f;
                     fadeInTimer.stop();
                     // Start the fade-out timer after a delay
-                    new Timer(2000, new ActionListener() {
+                    new Timer(5000, new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             fadeOutTimer.start();
